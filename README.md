@@ -1,5 +1,9 @@
 # Spotify Recommender
 
+Makes use of the a dataset of Spotify Web API values created by Yamac Eren Ay, and is [available through Kaggle](https://www.kaggle.com/datasets/yamaerenay/spotify-dataset-19212020-600k-tracks).
+
+Documentation of values in the dataset can be found in the [official documentation for the API](https://developer.spotify.com/documentation/web-api).
+
 ### To run
 
 1) Set up the virtual enviroment with `pipenv install`
