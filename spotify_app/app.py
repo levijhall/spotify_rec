@@ -20,7 +20,7 @@ def create_app():
 
     @app.route('/', methods=['POST', 'GET'])
     def root():
-        if request.method == "GET": 
+        if request.method == "GET":
             return render_template('base.html',
                                    message="Please enter a song title above")
         elif request.method == 'POST':
