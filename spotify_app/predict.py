@@ -6,8 +6,8 @@ import os
 from joblib import load
 
 # Set global path and model
-APP_ROOT = os.path.dirname(os.path.abspath(__file__))     
-VECT_PATH = os.path.join(APP_ROOT, "./model/vect.pkl")  
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+VECT_PATH = os.path.join(APP_ROOT, "./model/vect.pkl")
 NEIGH_PATH = os.path.join(APP_ROOT, "./model/neigh.pkl")
 
 vect = load(VECT_PATH)
