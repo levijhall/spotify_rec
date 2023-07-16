@@ -17,17 +17,18 @@ original_start = time.process_time()
 total_entries = 0
 
 batch_size = 10_000
+search_terms = pd.read_pickle('../data/final/lyrics.pkl')
+
 while True:
     start_time = time.process_time()
 
-    search_terms = pd.read_pickle('../data/final/lyrics.pkl')
     new_entries = search(search_terms, batch_size)
     search_terms.to_pickle('../data/final/lyrics.pkl')
 
     end_time = time.process_time()
 
-    to = ['Levi Hall <levi.j.hall@outlook.com']
-    fro = ['Levi Hall <contact@levihall.com']
+    to = ['<levi.j.hall@outlook.com>']
+    fro = 'Levi Hall <contact@levihall.com>'
     subject = 'Lyrics update'
 
     diff = end_time - start_time
@@ -50,7 +51,7 @@ while True:
 
         text = 'An error has occured!\n\n' + log_output + text
 
-    sendMail(to, fro, text)
+    sendMail(to, fro, subject, text)
 
     if new_entries < batch_size:
         break

@@ -154,6 +154,7 @@ def search(search_terms: pd.DataFrame, max_searches=10_000, verbose=False):
 
             if verbose:
                 print(status, url, lyrics[:1])
+            logging.info(f"{band}, {song}, {status}, {url}")
 
     except Exception as e:
         logging.critical(f"{str(e)}\n")
