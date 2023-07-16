@@ -156,8 +156,7 @@ def search(max_searches=10_000, verbose=False):
                 print(status, url, lyrics[:1])
 
     except Exception as e:
-        logging.critical(f"{str(e)}\n" /
-                         f"{band}, {song}, {status}, {url}")
+        logging.critical(f"{str(e)}\n")
         print(str(e))
         return searches
 
