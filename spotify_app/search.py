@@ -3,7 +3,7 @@ import time
 import datetime
 
 from lyrics import search
-from email import sendMail
+from sendMail import sendMail
 
 
 def read_last_n_lines(file_path, n):
