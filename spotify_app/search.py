@@ -21,7 +21,7 @@ while True:
     start_time = time.process_time()
 
     search_terms = pd.read_pickle('../data/final/lyrics.pkl')
-    new_entries = search(batch_size)
+    new_entries = search(search_terms, batch_size)
     search_terms.to_pickle('../data/final/lyrics.pkl')
 
     end_time = time.process_time()

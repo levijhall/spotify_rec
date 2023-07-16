@@ -1,3 +1,4 @@
+import pandas as pd
 import requests
 import logging
 
@@ -113,8 +114,7 @@ def find_lyrics(band: str, song: str, min_similarity=0.5) -> str:
     return lyrics, max_score, url
 
 
-def search(max_searches=10_000, verbose=False):
-    global search_terms
+def search(search_terms: pd.DataFrame, max_searches=10_000, verbose=False):
     searches = 0
 
     try:
