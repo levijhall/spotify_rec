@@ -1,2 +1,5 @@
 .env
 /data/
+/notebook/
+/search/
+/spotify_app/__pycache__/
